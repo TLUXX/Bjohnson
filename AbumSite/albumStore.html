@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Music Album Store</title>
+</head>
+<body>
+        <div id="albums">
+        <h2>Album Details</h2>
+        <h4 id = "title" ></h4>
+        <h4 id="artist"></h4>
+        <h4  id ="album"></h4>
+        <h4 id="year"></h4>
+        </div>
+
+<script>
+var songs = [
+	{
+		title: "Getting Away with It(All Messed Up)",
+		artist: "James",
+		album: "Pleased to Meet You",
+		year: 2001,
+		art: "https://upload.wikimedia.org/wikipedia/en/2/2a/JamesPleasedToMeetYou.jpg"
+	},
+	{
+		title: "Renaissance Affair",
+		artist: "Hooverphonic",
+		album: "Blue Wonder Power Milk",
+		year: 1998,
+		art: "https://upload.wikimedia.org/wikipedia/en/1/17/Hooverphonic-Blue_Wonder_Power_Milk.jpg"
+	},
+	{
+		title: "White Nights",
+		artist: "Oh Land",
+		album: "Oh Land",
+		year: 2011,
+		art: "https://upload.wikimedia.org/wikipedia/en/6/68/Oh_Land_%28album%29.png"
+	},
+
+	]
+document.addEventListener('DOMContentLoaded', ()=>{
+	var id = document.querySelector("#albums");
+	var count = 0;
+	songs.forEach((i)=>{
+		newDiv = document.createElement('div');
+		newDiv.innerHTML = `
+		<h3> Album ${count}</h3>
+			<img src="${i.art}" width="128" height="128" onclick="updateDetails(songs[${count}])">`;
+		id.appendChild(newDiv);
+		count++;
+
+	})
+});
+
+
+function updateDetails(i)
+{
+	document.querySelector('#title').innerHTML = i.title;
+	document.querySelector('#artist').innerHTML = i.artist;
+	document.querySelector('#album').innerHTML = i.album;
+	document.querySelector('#year').innerHTML = i.year;
+}
+</script>
+
+</body>
+</html>
