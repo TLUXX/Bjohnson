@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Age Caluculator</title>
+</head>
+<body>
+<h1>Age Calculator</h1>
+
+<form name="formcalc">
+
+  Enter Your Name: <input type="text" name="name">
+  <br>
+  Enter Current Year or Future Year: <input type="text" name="year1">
+  <br>
+  Enter Birth Year: <input type="text" name="year2">
+  <br>
+  Your Age: <input type="text" name="txtres">
+
+
+  <input type="button" value="Calculate" onClick="Calculate()">
+
+<form/>
+
+<script>
+
+function Calculate() {
+  var year1, year2, res;
+
+  //var name = (document.formcalc.name.value);
+  year1=Number(document.formcalc.year1.value);
+  year2=Number(document.formcalc.year2.value);
+
+  res=year1 - year2;
+
+document.formcalc.txtres.value=res;
+
+
+}
+
+
+</script>
+
+</body>
+</html>
