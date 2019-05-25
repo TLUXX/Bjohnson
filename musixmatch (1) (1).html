@@ -1,0 +1,28 @@
+<html>
+<head>
+        <title>Musixmatch API</title>
+</head>
+<body >
+
+	<div >
+	<a  href="" id="myAncher">Artist 's Twitter Click here</a>
+	</div>
+
+        <script>
+
+        function musixmatch(myData){
+        var hy=myData.message.body.artist_list[0].artist.artist_twitter_url;
+
+        var myAnch = document.getElementById('myAncher');
+         myAnch.href=hy;
+
+}
+        </script>
+
+
+<script
+src='https://api.musixmatch.com/ws/1.1/artist.search?apikey=4242cadd5ee24e6cd5f10868974810b8&q_artist=beyonce&format=jsonp&callback=musixmatch'>
+</script>
+
+ </body>
+</html>
