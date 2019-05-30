@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>
+</title>
+</head>
+<body>
+
+<div id="main"></div>
+
+<script type="text/javascript">
+
+class Character{
+//Class definition, setup object
+
+constructor(_name, _age, _favoriteSong){
+
+this.name = _name;
+this.age = _age;
+this.favoriteSong= _favoriteSong;
+}
+
+//class Method
+sayMyName(){
+  return this.name;
+}
+
+printDescription (){
+
+ return  "my name is :" +this.name + " age is :" + this.age+"  favoriteSong is:"+this.favoriteSong;
+
+}
+
+}
+
+ myCharacter1 = new Character ("Bob", 30, "Hey Jude");
+ myCharacter2 = new Character ("Brian", 21, "Dont Worry Child");
+
+document.getElementById("main").innerHTML = myCharacter1.printDescription() +"<br/>"+ myCharacter2.printDescription();
+
+</script>
+
+
+</body>
+</html>
