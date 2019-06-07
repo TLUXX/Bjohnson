@@ -10,35 +10,72 @@
 <script type="text/javascript">
 
 class Character{
-//Class definition, setup object
-
 constructor(_name, _age, _favoriteSong){
 
 this.name = _name;
 this.age = _age;
 this.favoriteSong= _favoriteSong;
 }
-
 //class Method
 sayMyName(){
   return this.name;
+}
+compareAge(Wizard){
+
+if(this.age<Wizard.age){
+return Wizard.name+ " is Elder" ;
+}
+else{
+return  this.name+" is Elder";
+}
+
 }
 
 printDescription (){
 
  return  "my name is :" +this.name + " age is :" + this.age+"  favoriteSong is:"+this.favoriteSong;
+}
 
+}
+class Wizard extends Character{
+
+constructor(_name, _age, _favoriteSong,_hatColor){
+super(_name, _age, _favoriteSong);
+this.hatColor=_hatColor;
+}
+castSpell(){
+return "'The wizard casts a spell!";
+console.log("'The wizard casts a spell!");
+}
+
+}
+class Bard extends Character{
+
+constructor(_name, _age, _favoriteSong,_MInstrument){
+super(_name, _age, _favoriteSong);
+this._MInstrument=_MInstrument;
+}
+
+playSong (song){
+console.log("bards Play this song :"+song);
+return  "bards Play this song :"+song;
 }
 
 }
 
- myCharacter1 = new Character ("Bob", 30, "Hey Jude");
- myCharacter2 = new Character ("Brian", 21, "Dont Worry Child");
+myWizard = new Wizard("Luke", 40, "This Magic Moment", "blue");
 
-document.getElementById("main").innerHTML = myCharacter1.printDescription() +"<br/>"+ myCharacter2.printDescription();
+myBard = new Bard("Dizzy", 93, "Salt Peanut", "trumpet");
+
+myWizard.sayMyName(); // the wizard should have access to all of the Character class methods WITHOUT having to duplicate them.
+
+myWizard.castSpell(); // console tells me 'The wizard casts a spell!' or something exciting.
+
+myBard.playSong('Born This Way'); // console tells me that the bard plays this song
+
+myBard.compareAge(myWizard);
+document.getElementById("main").innerHTML= myWizard.sayMyName()+"<br/> "+myWizard.castSpell()+"<br/>"+ myBard.sayMyName()+"<br/> "+myBard.playSong('Born This Way')+"<br/>"+myBard.compareAge(myWizard);
 
 </script>
-
-
 </body>
 </html>
