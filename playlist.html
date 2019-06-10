@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>
+</title>
+</head>
+<body>
+
+<div id="main"></div>
+<div id="main1"></div>
+<script type="text/javascript">
+
+
+var i=0;
+
+class Media{
+constructor(_name, _duration){
+
+this.name = _name;
+this.duration = _duration;
+
+}
+
+playing(){
+return this.name;
+}
+
+}
+class Song extends Media{
+
+constructor(_name, _duration,_artist){
+super(_name, _duration);
+this.artist=_artist;
+}
+printDescription (){
+
+ return  "Playlist item name is :" +this.name + " & its Duration is :" + this.duration+" 's & artist name is "+this.artist;
+
+}
+}
+
+class Podcasts extends Media{
+
+constructor(_name, _duration){
+super(_name, _duration);
+
+}
+printDescription (){
+
+ return  "Playlist item name is :" +this.name + " & its Duration is :" + this.duration;
+
+}
+}
+class movie extends Media{
+
+constructor(_name, _duration,_rating){
+super(_name, _duration);
+this.rating=_rating;
+}
+printDescription (){
+
+ return  "Playlist item name is :" +this.name + " & its Duration is :" + this.duration+" 's & Rating is "+this.rating;
+
+}
+
+}
+
+var playlist=[];
+playlist[0]=new Song("Hey Jude", "4:56", "The Beatles");
+playlist[1]=new movie("Fast and Furious", "1:45", "R");
+playlist[2]=new Podcasts("Club Session Mix", "1:03");
+
+
+playlist.sort(function(a, b){
+    var nameA=a.name.toLowerCase(), nameB=b.name.toLowerCase()
+    if (nameA < nameB)
+        return -1
+    if (nameA > nameB)
+        return 1
+    return 0
+})
+
+function next( playlist){
+ return playlist[i].name+" is playing &  next is  "+playlist[i+1].name+" & "+playlist[i+1+1].name;
+}
+
+document.getElementById("main").innerHTML=  playlist[0].playing()+ "<br/> "+playlist[1].playing()+ "<br/> "+playlist[2].playing()+"<br/> "+playlist[0].printDescription()+"<br/> "+playlist[1].printDescription()+"<br/> "+playlist[2].printDescription()+"<br/> "+next(playlist);
+
+</script>
+</body>
+</html>
