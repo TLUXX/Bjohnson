@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>MusixMatch API</title>
+    </head>
+    <body>
+        <div id="main">
+            Something will go here
+        </div>
+     </body>
+
+     <script>
+     function MMResults(json){
+      var myDiv = document.getElementById("main");
+      myDiv.innerHTML = json.items[0].artist_name ;
+      console.log(json);}
+     </script>
+
+
+    <script
+    src='https://api.musixmatch.com/ws/1.1/track.search&apikey=4242cadd5ee24e6cd5f10868974810b8&format=json'>
+    </script>
+
+
+</html>

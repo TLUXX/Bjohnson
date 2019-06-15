@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TLUXX Music</title>
+<style>
+
+      Button {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      margin: 2px 0;
+      border: solid 1px transparent;
+      border-radius: 4px;
+      padding: 0.5em 1em;
+      color: #ffffff;
+      background-color: #1E12CD;
+      }
+
+      #Button2 {
+      height:150px;
+      width:250px;
+
+      position: fixed;
+        bottom: 40%;
+        right: 40%;
+      display: inline-block;
+      text-align: left;
+      text-decoration: none;
+      margin: 2px 0;
+      border: solid 1px transparent;
+      border-radius: 4px;
+      padding: 0.5em 1em;
+      color: #E81E1E;
+      background-color: #E81E1E;
+      }
+
+
+</style>
+
+</head>
+
+<body>
+        <div id="songs">
+        <h2>TLUXX TOP SONGS</h2>
+        <h3>Details</h3>
+        <h4 id = "title" ></h4>
+        <h4 id="artist"></h4>
+        <h4  id ="label"></h4>
+        <h4 id="year"></h4>
+        </div>
+
+        <audio id="myAudio1">
+        <source src="WOY.mp3" type="audio/mpeg">
+        </audio>
+
+        <audio id="myAudio2">
+        <source src="EE.mp3" type="audio/mpeg">
+        </audio>
+
+        <audio id="myAudio3">
+        <source src="WWBTL.mp3" type="audio/mpeg">
+        </audio>
+
+<div id=Button2>
+        <button onclick="playAudio1()" type="button">Play Walking Over You</button>
+        <button onclick="pauseAudio1()" type="button">Stop</button>
+        <br>
+        <br>
+
+        <button onclick="playAudio2()" type="button">Play Electric Estasy</button>
+        <button onclick="pauseAudio2()" type="button">Stop</button>
+        <br>
+        <br>
+
+        <button onclick="playAudio3()" type="button">Play We Weren't Born to Lose</button>
+        <button onclick="pauseAudio3()" type="button">Stop</button>
+</div>
+
+
+<script>
+var songs = [
+	{
+		title: "Walking Over You",
+		artist: "TLUXX",
+		label: "Dancewood Records",
+		year: 2019,
+		art: "tluxxcover1.jpg"
+
+	},
+	{
+		title: "Electric Esctasy",
+		artist: "TLUXX",
+		label: "Eyes on You",
+		year: 2018,
+		art: "tluxxcover2.jpg"
+	},
+	{
+		title: "We Werent Born to Lose",
+		artist: "TLUXX and Bret Pemberton",
+		label: "TLUXX Records",
+		year: 2018,
+		art: "tluxxcover3.jpg"
+	},
+
+	]
+document.addEventListener('DOMContentLoaded', ()=>{
+	var id = document.querySelector("#songs");
+	var count = 0;
+	songs.forEach((i)=>{
+		newDiv = document.createElement('div');
+		newDiv.innerHTML = `
+
+			<img src="${i.art}" width="128" height="128" onclick="updateDetails(songs[${count}])">`;
+		id.appendChild(newDiv);
+		count++;
+
+	})
+});
+
+
+function updateDetails(i)
+{
+	document.querySelector('#title').innerHTML = i.title;
+	document.querySelector('#artist').innerHTML = i.artist;
+	document.querySelector('#label').innerHTML = i.label;
+	document.querySelector('#year').innerHTML = i.year;
+}
+</script>
+
+<script>
+var x = document.getElementById("myAudio1");
+  function playAudio1() {
+  x.play();
+  }
+
+  function pauseAudio1() {
+  x.pause();
+  }
+
+  var y = document.getElementById("myAudio2");
+  function playAudio2() {
+  y.play();
+  }
+
+  function pauseAudio2() {
+  y.pause();
+  }
+
+  var z = document.getElementById("myAudio3");
+  function playAudio3() {
+  z.play();
+        }
+
+  function pauseAudio3() {
+  z.pause();
+  }
+
+</script>
+
+
+
+<br>
+<center>
+<a HREF="FinalProject.html"</a> <button>Home</button>
+<a HREF="TLUXXBio.html"</a> <button>TLUXXBio</button>
+<a HREF="Shows.html"</a> <button>Up Coming Shows</button>
+<a HREF="Articles.html"</a> <button>Articles</button>
+<a HREF="Music.html"</a> <button>Music</button>
+<a HREF="Subscribe_2.html"</a> <button>Subcribe</button>
+</center>
+
+</body>
+</html>

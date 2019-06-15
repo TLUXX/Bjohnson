@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TLUXX Music Player</title>
+
+<body>
+
+<audio id="myAudio1">
+<source src="WOY.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="myAudio2">
+<source src="EE.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="myAudio3">
+<source src="WOY.mp3" type="audio/mpeg">
+</audio>
+
+
+
+<button onclick="playAudio1()" type="button">Play Walking Over You</button>
+<button onclick="pauseAudio1()" type="button">Stop</button>
+<br>
+<br>
+
+<button onclick="playAudio2()" type="button">Play Electric Estasy</button>
+<button onclick="pauseAudio2()" type="button">Stop</button>
+<br>
+<br>
+
+<button onclick="playAudio3()" type="button">Play We Weren't Born to Lose</button>
+<button onclick="pauseAudio3()" type="button">Stop</button>
+
+
+
+<script>
+        var x = document.getElementById("myAudio1");
+        function playAudio1() {
+          x.play();
+        }
+
+        function pauseAudio1() {
+          x.pause();
+        }
+
+        var y = document.getElementById("myAudio2");
+        function playAudio2() {
+          y.play();
+        }
+
+        function pauseAudio2() {
+          y.pause();
+        }
+
+        var z = document.getElementById("myAudio3");
+        function playAudio3() {
+          z.play();
+        }
+
+        function pauseAudio3() {
+          z.pause();
+        }
+
+</script>
+
+</body>
+</html>

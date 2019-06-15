@@ -1,0 +1,59 @@
+<html>
+
+<head>
+<style>
+body {
+  width: auto;
+  height: auto;
+}
+
+  #weather {
+    border-radius: 25px;
+    background: #9CB5EF;
+    padding: 15px;
+</style>
+</head>
+
+<div id="weatherapp">
+<body>
+
+<center><h2> Rave Day <br> Weather </h2></center>
+<center
+<div id="weather">
+<div id="desc"></div>
+<div id="temp"></div>
+<div id="wind"></div></center>
+
+<div>
+  <form id="city-form">
+    <center><br><div> <input type="text" id="city-name" value = "Los Angeles"><br>Enter City Name</div></center>
+<br>
+    <center> <div> <input type="submit"></div><center>
+  </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+
+ $("#city-form").submit(function(event){
+    event.preventDefault();
+
+    var cityName = $("#city-name").val();
+    getWeather(cityName);
+  });
+
+  function getWeather(city){
+    $.get("http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&appid=fa9cece58e5a3c95eb141f60d15bac0a",function(data){
+      console.log(data);
+      $("#desc").html(data.weather[0].description);
+      $("#temp").html(data.main.temp);
+      $("#wind").html(data.wind.speed);
+
+})
+}
+
+</script>
+
+</body>
+</html>
