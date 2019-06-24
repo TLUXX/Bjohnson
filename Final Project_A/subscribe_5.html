@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ <title>JavaScript - Forms</title>
+
+ <style>
+
+ input[type=text], select, textarea {
+   width: 50%;
+   padding: 15px;
+   border: 3px solid #ccc;
+   border-radius: 4px;
+   resize: vertical;
+ }
+
+ label {
+   padding: 12px 12px 12px 0;
+   display: inline-block;
+ }
+
+ input[type=submit] {
+   background-color: #4CAF50;
+   color: white;
+   padding: 12px 20px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+ }
+
+ button {
+ display: inline-block;
+ text-align: center;
+ text-decoration: none;
+ margin: 2px 0;
+ border: solid 1px transparent;
+ border-radius: px;
+ padding: 0.5em 1em;
+ color: #ffffff;
+ background-color: #1E12CD;
+ }
+
+ </style>
+
+
+</head>
+<center><body background="tluxx_2.jpg"><center>
+
+  <p> SUBSCRIBE TO THE TLUXX FAMILY</p>
+
+<p id="welcome"</p>
+
+<form>
+
+<label for="fname">Enter First Name</label>
+<br>
+ <input type="text" id="fname"/>
+ <br>
+<label for="fname">Enter Last Name</label>
+<br>
+<input type="text" id="lname"/>
+ <br>
+ <label for="fname">Enter Email Address</label>
+ <br>
+<input type="text" id="email"/>
+ <br>
+
+ <input type="button" value="Submit" onclick="writeName();"/>
+</form>
+
+<center><p id="welcome"></p></center>
+
+<script>
+
+function writeName(){
+var welcomeMsg = document.getElementById('welcome');
+var name = document.getElementById('fname');
+
+welcomeMsg.innerHTML = fname.value+ ""+"Welcome to the TLUXX family!";
+
+}
+
+</script>
+
+
+<br>
+<br>
+<center>
+<a HREF="FinalProject.html"</a> <button>Home</button>
+<a HREF="TLUXXBio.html"</a> <button>TLUXXBio</button>
+<a HREF="Shows.html"</a> <button>Up Coming Shows</button>
+<a HREF="Articles.html"</a> <button>Articles</button>
+<a HREF="Music.html"</a> <button>Music</button>
+<a HREF="Subscribe_5.html"</a> <button>Subcribe</button>
+</center>
+</body>
+</html>
+
+</body>
+</html>

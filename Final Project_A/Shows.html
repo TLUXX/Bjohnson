@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+<title>TLUXX Upcoming shows</title>
+
+<center><h1>TLUXX Upcoming Shows</h1></center>
+
+<style>
+
+      Button {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      margin: 2px 0;
+      border: solid 1px transparent;
+      border-radius: 4px;
+      padding: 0.5em 1em;
+      color: #ffffff;
+      background-color: #1E12CD;
+      }
+      .dropbtn {
+        background-color: #3498DB;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .show {display: block;}
+
+
+</style>
+</head>
+<body  background="tluxx_2.jpg">
+
+<ul>
+
+<li>06/29/19 - Bassmnt Wolfgang Gartner & TLUXX, San Diego, CA </li>
+<br>
+<li>06/30/19 - Water Castle, Steve Aoki & TLUXX, Mexico </li>
+<br>
+<li>07/21/19 - Charity Event, Los Angeles, CA</li>
+<br>
+<li>07/26/19 - Nature World Festival - Monterrey Mexico </li>
+<br>
+<li>08/10/2019 - Catch One, Los Angeles, CA </li>
+<br>
+<li>08/17/2019 - Catch One, Los Angeles, CA </li>
+
+</ul>
+
+<h2>Buy Tickets</h2>
+
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Tickets</button>
+  <div id="myDropdown" class="dropdown-content">
+
+    <a href="http://bassmntsd.com/">06/29/19</a>
+    <a href=""> <br> 07/21/19<br>(coming soon)</a>
+    <a href="https://www.facebook.com/events/241372503188672/">07/26/19</a>
+    <a href="https://www.facebook.com/events/1097665630425576/">08/10/2019<br> (coming soon)</a>
+    <a href="h">08/17/2019<br> (coming soon)</a>
+
+  </div>
+</div>
+
+<script>
+
+function myFunction()
+{
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event)
+{
+  if (!event.target.matches('.dropbtn'))
+{
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++)
+{
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show'))
+{
+      openDropdown.classList.remove('show');
+}
+}
+}
+}
+</script>
+
+
+<br>
+<center>
+<a HREF="FinalProject.html"</a> <button>Home</button>
+<a HREF="TLUXXBio.html"</a> <button>TLUXXBio</button>
+<a HREF="Shows.html"</a> <button>Up Coming Shows</button>
+<a HREF="Articles.html"</a> <button>Articles</button>
+<a HREF="Music.html"</a> <button>Music</button>
+<a HREF="Subscribe_5.html"</a> <button>Subcribe</button>
+</center>
+
+<br>
+<center>
+<iframe src="Weather_b.html" height="280" width="320"></iframe>
+</center>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <title>TLUXX NEWS</title>
+
+<center><h1>TLUXX NEWS</h1></center>
+
+<style>
+
+      Button {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      margin: 2px 0;
+      border: solid 1px transparent;
+      border-radius: 4px;
+      padding: 0.5em 1em;
+      color: #ffffff;
+      background-color: #1E12CD;
+      }
+
+</style>
+</head>
+<body  background="tluxx_2.jpg">
+
+
+
+<button onclick="sortList()">Sort by Date</button>
+<button onclick="resetList();">Reset List</button>
+
+
+<ul id="id01">
+
+<li>10/30/19 - <a href= https://vibemylife.com/sweet-deep-house-vibes-on-tluxxs-latest-release-on-eyes-on-you-entitled-electric-ecstasy/>VIBE MY LIFE</a>, Definitely a spotlight of deep home tunes recently...
+</li>
+
+<br>
+
+<li>10/13/19 -
+  <a href= https://edmnations.com/2018/10/13/sweet-deep-house-vibes-on-tluxxs-latest-release-on-eyes-on-you-entitled-electric-ecstasy/>EDM NATION</a>, Sweet deep house vibes...
+</li>
+
+<br>
+
+<li>04/08/18 -  <a href= https://edmjoy.com/2018/04/tluxx-we-werent-born-to-lose/
+/>EDM JOY</a>, TLUXX Reveals Powerful, Emotional & Heart-Throbbing ‘We Weren’t Born To Lose’
+</li>
+
+<br>
+
+<li>04/05/18 - <a href= https://www.edmsauce.com/2018/04/05/tluxx-gives-us-awesome-lyrically-driven-progressive-anthem/
+/>EDM Sauce</a>, This is one of the stronger progressive records we've come across in a while since SHM took the stage at Ultra.
+</li>
+
+<br>
+
+<li>08/05/18 - <a href= http://noiseprn.com/2018/04/05/tluxx-we-werent-born-to-lose/
+/>Noise Porn</a>, TLUXX  Releases Uplifting  “WE WEREN’T BORN TO LOSE” With Brett Pemperton
+</li>
+
+<br>
+
+<li>10/01/17 - <a href= https://www.huffpost.com/entry/exclusive-music-video-premiere-7th-angel-exciting_b_59f863a4e4b0e4c2eab1c3a4?ncid
+/>Huffington Post</a>, “7th Angel” is definitely yazum. The melody exudes smooth pizzazz and the infectious groove pulsates with textured energy.
+TLUXX has an innate feel for producing electronic dance music that acts as a capacitor for rhythmic and harmonic forces. The result is potent and very danceable.
+</li>
+
+</ul>
+
+<script>
+function resetList(){
+  window.location='articles.html';
+}
+</script>
+
+
+<script>
+function sortList() {
+  var list, i, switching, b, shouldSwitch;
+  list = document.getElementById("id01");
+  switching = true;
+  while (switching) {
+
+  switching = false;
+  b = list.getElementsByTagName("LI");
+  for (i = 0; i < (b.length - 1); i++) {
+  shouldSwitch = false;
+
+  if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+    shouldSwitch = true;
+    break;
+}
+}
+    if (shouldSwitch) {
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+}
+}
+}
+</script>
+
+<br>
+<center>
+<a HREF="FinalProject.html"</a> <button>Home</button>
+<a HREF="TLUXXBio.html"</a> <button>TLUXXBio</button>
+<a HREF="Shows.html"</a> <button>Up Coming Shows</button>
+<a HREF="Articles.html"</a> <button>Articles</button>
+<a HREF="Music.html"</a> <button>Music</button>
+<a HREF="Subscribe_5.html"</a> <button>Subcribe</button>
+</center>
+
+</body>
+</html>
