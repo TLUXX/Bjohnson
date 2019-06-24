@@ -1,4 +1,15 @@
-Original Final Project Plan. 
+Project Bugs
+The issue that I had on my project was the subscribe page.  In order to write the users input to a csv file, I had to download a local server software and other things that I did not understand.  Therefore,  it was a bit much for me to understand at this point. The form acts the way I want it to, but does not write to a cvs file. 
+
+Possible Improvement:
+1. better music player
+2. get rid of weather script 
+3. Add additional tabs, such as a possible shop,  music videos, photo gallary. 
+4. Make sure from works
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Original Final Project Plan.
 
 For my final project, I would like to create single artist page that will help people learn a bit more about my music and myself. (TLUXX)
 
