@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+
+<head>
+     <title>Caluculator</title>
+</head>
+<style>
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #00AAFF, #00FF6C);
+}
+
+
+td, tr {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+table {
+ border-;
+}
+
+
+
+</style>
+<center>   <body>
+<h1>Calculator</h1>
+
+       <input class="display" type="text" style="width:170px;" size="10" name="Display">
+
+       <table>
+         <tr>
+           <td><input class="calc" data-role="number" type="button" value="7"></td>
+           <td><input class="calc" data-role="number" type="button" value="8"></td>
+           <td><input class="calc" data-role="number" type="button" value="9"></td>
+           <td><input class="calc" data-role="operator" type="button" value="+"></td>
+         </tr>
+         <tr>
+           <td><input class="calc" data-role="number" type="button" value="4"></td>
+           <td><input class="calc" data-role="number" type="button" value="5"></td>
+           <td><input class="calc" data-role="number" type="button" value="6"></td>
+           <td><input class="calc" data-role="operator" type="button" value="-"></td>
+         </tr>
+         <tr>
+           <td><input class="calc" data-role="number" type="button" value="1"></td>
+           <td><input class="calc" data-role="number" type="button" value="2"></td>
+           <td><input class="calc" data-role="number" type="button" value="3"></td>
+           <td><input class="calc" data-role="operator" type="button" value="*"></td>
+         </tr>
+         <tr>
+           <td><input class="clear" type="button" value="C"></td>
+           <td><input class="calc" data-role="number" type="button" value="0"></td>
+           <td><input class="calculate" type="button" value="="></td>
+           <td><input class="calc" data-role="operator" type="button" value="/"></td>
+         </tr>
+       </table>
+
+
+
+ <script>
+ $(".calc").on('click',function(){
+
+   if($(this).attr('data-role')!='operator'){
+     $(".display").val($(".display").val()+$(this).val());
+   }
+   else{
+     if($(".display").val()!=''){
+       $(".display").val($(".display").val()+$(this).val());
+     }
+   }
+ });
+
+
+ $(".clear").on('click',function(){
+   $(".display").val('');
+ });
+
+
+ $(".calculate").on('click',function(){
+   var expression = $(".display").val();
+   $(".display").val(eval(expression));
+ });
+
+
+ </script>
+
+</body></center>
+
+</html>

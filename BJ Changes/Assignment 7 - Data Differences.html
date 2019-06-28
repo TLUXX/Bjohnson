@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<header>
+
+<img src="taxphoto.jpg" id="taxes">
+
+</header>
+<h1>Income Tax Calculator</h1>
+<style>
+
+.box{
+  position: fixed;
+  right: 90px;
+  top: 275px;
+}
+
+header {
+  background-image: url("taxphoto.jpg");
+  height: 50%;
+}
+
+
+  h1 {
+      font: avenir;
+  }
+
+  br {
+       line-height: 175%;
+     }
+  label {
+        padding: 5px;
+        border: solid .5px;
+        border-radius: 2px;
+        font: avenir;
+        border-width: thin
+        padding: 50px;
+  }
+
+  form {
+  background-color: #F1FEFE;
+  width: 400px;
+  border: 15px solid #12C0C6;
+  padding: 50px;
+  margin: 20px;
+}
+
+div {
+background-color: #F1FEFE;
+width: 340px;
+border: 15px solid #12C0C6;
+padding: 50px;
+margin: 20px;
+
+}
+
+.button {
+  background-color: #12C0C6;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+</style>
+<body>
+
+
+<form>
+  <label for="year">Tax Year</label><br>
+  <select required name="year" id="year">
+    <option selected disabled>Year</option>
+    <option value="2014">2014</option>
+    <option value="2015">2015</option>
+    <option value="2016">2016</option>
+    <option value="2017">2017</option>
+    <option value="2018">2018</option>
+    <option value="2019">2019</option>
+  </select><br><br>
+
+  <label for="pay_rate">Gross Income</label><br>
+  $<input type="number" min="0" step="1000" value="" name="pay_rate" id="pay_rate">
+  </input><br><br>
+
+  <label for="filing_status">Filing Status</label><br>
+  <select id="filing_status" name="filing_status">
+    <option selected disabled>Filing Status</option>
+    <option value="&filing_status=single">Single</option>
+    <option value="&filing_status=married">Married</option>
+    <option value="&filing_status=married_separately">Married Filing Separately</option>
+    <option value="&filing_status=head_of_household">Head of Household</option>
+  </select><br><br>
+
+  <label for="state">State</label><br>
+  <select name="state" id="state">
+    <option selected disabled>State</option>
+    <option value="state=AL">Alabama</option>
+    <option value="state=AK">Alaska</option>
+    <option value="state=AZ">Arizona</option>
+    <option value="state=AR">Arkansas</option>
+    <option value="state=CA">California</option>
+    <option value="state=CO">Colorado</option>
+    <option value="state=CT">Connecticut</option>
+    <option value="state=DE">Delaware</option>
+    <option value="state=FL">Florida</option>
+    <option value="state=GA">Georgia</option>
+    <option value="state=HI">Hawaii</option>
+    <option value="state=ID">Idaho</option>
+    <option value="state=IL">Illinois</option>
+    <option value="state=IN">Indiana</option>
+    <option value="state=IA">Iowa</option>
+    <option value="state=KS">Kansas</option>
+    <option value="state=KY">Kentucky</option>
+    <option value="state=LA">Louisiana</option>
+    <option value="state=ME">Maine</option>
+    <option value="state=MD">Maryland</option>
+    <option value="state=MA">Massachusetts</option>
+    <option value="state=MI">Michigan</option>
+    <option value="state=MN">Minnesota</option>
+    <option value="state=MS">Mississippi</option>
+    <option value="state=MO">Missouri</option>
+    <option value="state=MT">Montana</option>
+    <option value="state=NE">Nebraska</option>
+    <option value="state=NV">Nevada</option>
+    <option value="state=NH">New Hampshire</option>
+    <option value="state=NJ">New Jersey</option>
+    <option value="state=NM">New Mexico</option>
+    <option value="state=NY">New York</option>
+    <option value="state=NC">North Carolina</option>
+    <option value="state=ND">North Dakota</option>
+    <option value="state=OH">Ohio</option>
+    <option value="state=OK">Oklahoma</option>
+    <option value="state=OR">Oregon</option>
+    <option value="state=PA">Pennsylvania</option>
+    <option value="state=RI">Rhode Island</option>
+    <option value="state=SC">South Carolina</option>
+    <option value="state=SD">South Dakota</option>
+    <option value="state=TN">Tennessee</option>
+    <option value="state=TX">Texas</option>
+    <option value="state=UT">Utah</option>
+    <option value="state=VT">Vermont</option>
+    <option value="state=VA">Virginia</option>
+    <option value="state=WA">Washington</option>
+    <option value="state=WV">West Virginia</option>
+    <option value="state=WI">Wisconsin</option>
+    <option value="state=WY">Wyoming</option>
+  </select><br><br>
+
+  <label for="pay_periods">Pay Period</label><br>
+  <select name="pay_period" id="pay_periods">
+    <option selected disabled>Pay Period</option>
+    <option value="&pay_periods=260">Daily</option>
+    <option value="&pay_periods=52">Weekly</option>
+    <option value="&pay_periods=26">BiWeekly</option>
+    <option value="&pay_periods=24">Semimonthly</option>
+    <option value="&pay_periods=12">Monthly</option>
+    <option value="&pay_periods=4">Quarterly</option>
+    <option value="&pay_periods=2">Semiannually</option>
+    <option value="&pay_periods=1">Annually</option>
+  </select><br><br>
+
+  <label for="exemptions">Personal Exemptions (applies only to 2017 and before)</label><br>
+  <select id="exemptions" name="exemptions">
+    <option selected disabled>Exemptions</option>
+    <option value="&exemptions=1">1</option>
+    <option value="&exemptions=2">2</option>
+    <option value="&exemptions=3">3</option>
+    <option value="&exemptions=4">4</option>
+    <option value="&exemptions=5">5</option>
+    <option value="&exemptions=6">6</option>
+    <option value="&exemptions=7">7</option>
+    <option value="&exemptions=8">8</option>
+    <option value="&exemptions=9">9</option>
+    <option value="&exemptions=10">10</option>
+    <option value="&exemptions=11">11</option>
+    <option value="&exemptions=12">12</option>
+    <option value="&exemptions=13">13</option>
+    <option value="&exemptions=14">14</option>
+    <option value="&exemptions=15">15</option>
+    <option value="&exemptions=16">16</option>
+    <option value="&exemptions=17">17</option>
+  </select><br><br>
+</form>
+
+<input type="button" id="submit" name="submit" class="button" value="Submit"><br>
+
+<div id=Annual_FICA>Estimated FICA Taxes Owed This Year:</div><br>
+<div id=Annual_Federal>Estimated Federal Taxes Owed This Year:</div><br>
+<div id=Annual_State>Estimated State Taxes Owed This Year:</div><br>
+<div id=Per_Pay_Period_FICA>Estimated FICA Taxes Owed This Pay Period:</div><br>
+<div id=Per_Pay_Period_Federal>Estimated Federal Taxes Owed This Pay Period:</div><br>
+<div id=Per_Pay_Period_State>Estimated State Taxes Owed This Pay Period:</div><br>
+
+<script>
+
+  function round(value, precision) {
+     var multiplier = Math.pow(10, precision || 0);
+     return Math.round(value * multiplier) / multiplier;
+  }
+
+  var submit = document.getElementById("submit");
+
+  submit.addEventListener("click", getRequest);
+
+  function getRequest(){
+    var year = document.getElementById("year").value;
+    var pay_rate = document.getElementById("pay_rate").value;
+    var filing_status = document.getElementById("filing_status").value;
+    var state = document.getElementById("state").value;
+    var pay_periods = document.getElementById("pay_periods").value;
+    var exemptions = document.getElementById("exemptions").value;
+    var url = 'https://taxee.io/api/v2/calculate/'+year;
+    var params;
+    alert(exemptions);
+    if(exemptions == 'Exemptions'){
+      params = state+filing_status+pay_periods+'&pay_rate='+pay_rate;
+    }
+    else{
+      params = state+filing_status+pay_periods+'&pay_rate='+pay_rate+exemptions;
+    }
+    var http = new XMLHttpRequest();
+
+  http.open("POST", url, true);
+  //Send the proper header information along with the request
+  http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  http.setRequestHeader("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUElfS0VZX01BTkFHRVIiLCJodHRwOi8vdGF4ZWUuaW8vdXNlcl9pZCI6IjVjZTFkOGJmNGU5ZjIxNTMzNDQyZjEwZCIsImh0dHA6Ly90YXhlZS5pby9zY29wZXMiOlsiYXBpIl0sImlhdCI6MTU1OTIzMzg3Mn0.xO3noo4LMevsXHk6NN43LxUGFCzbfrKv35_h44YEz4w");
+
+
+http.onreadystatechange = function() {//Call a function when the state changes.
+  if(http.readyState == 4 && http.status == 200) {
+    var txt = http.responseText;
+    var obj = JSON.parse(txt);
+    document.getElementById("Annual_FICA").innerHTML = 'Estimated FICA Taxes Owed This Year: $' + round(obj.annual.fica.amount,2);
+    document.getElementById("Annual_Federal").innerHTML = 'Estimated Federal Taxes Owed This Year: $' + round(obj.annual.federal.amount,2);
+    document.getElementById("Annual_State").innerHTML = 'Estimated State Taxes Owed This Year: $' + round(obj.annual.state.amount,2);
+    document.getElementById("Per_Pay_Period_FICA").innerHTML = 'Estimated FICA Taxes Owed This Pay Period: $' + round(obj.per_pay_period.fica.amount,2);
+    document.getElementById("Per_Pay_Period_Federal").innerHTML = 'Estimated Federal Taxes Owed This Pay Period: $' + round(obj.per_pay_period.federal.amount,2);
+    document.getElementById("Per_Pay_Period_State").innerHTML = 'Estimated State Taxes Owed This Pay Period: $' + round(obj.per_pay_period.state.amount,2);
+  }
+  if(http.readyState == 4 && http.status == 400) {
+    alert('Error: ' + http.status + '. Please fill out entire form.')
+  }
+}
+http.send(params);
+
+}
+
+
+</script>
+
+<div1 class="box">
+<iframe src="calculator.html" height="280" width="300"></iframe>
+
+
+
+
+</body>
+</html>
+
+</body>
+</html>
